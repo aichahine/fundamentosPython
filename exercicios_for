@@ -1,0 +1,29 @@
+import os
+os.system('cls')
+import time
+
+''' Exercícios while '''
+
+''' 3. Numa eleição existem três candidatos: Faça um programa que peça o número total de eleitores.
+Peça para cada eleitor votar e ao final mostrar o número de votos de cada candidato. '''
+
+totalEleitores = int(input("Digite o número total de eleitores: "))
+
+
+
+''' 4. Desenvolva um programa que funcione da seguinte maneira: Solicite ao usuário
+que informe a quantidade total de pessoas em um grupo. Para cada pessoa, peça
+que o usuário registre o sexo, utilizando a letra 'm' ou 'M' para masculino. O
+programa deve contar e, ao final, exibir o total de pessoas do sexo masculino. '''
+
+''' 5. Desenvolva um programa que solicite ao usuário um nome e uma senha,
+garantindo que a senha não seja igual ao nome de usuário. Se forem iguais, exiba
+uma mensagem de erro e peça as informações novamente. '''
+
+''' 6. Ler do teclado a idade e o sexo de 10 pessoas, calcule e imprima:
+
+idade média das mulheres
+
+idade média dos homens
+
+idade média do grupo '''
