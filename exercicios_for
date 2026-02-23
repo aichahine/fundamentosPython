@@ -4,11 +4,29 @@ import time
 
 ''' Exercícios while '''
 
+
 ''' 3. Numa eleição existem três candidatos: Faça um programa que peça o número total de eleitores.
 Peça para cada eleitor votar e ao final mostrar o número de votos de cada candidato. '''
 
-totalEleitores = int(input("Digite o número total de eleitores: "))
+candidato1 = 0
+candidato2 = 0
+candidato3 = 0
 
+totalEleitores = int(input("Digite o número total de eleitores: "))
+for i in range(totalEleitores):
+    voto = int(input("Digite o seu voto:\n1 - Candidato um\n2 - Candidato dois\n3 - Candidato três\n"))
+    if voto == 1:
+        candidato1 += 1
+    elif voto == 2:
+        candidato2 += 1
+    elif voto == 3:
+        candidato3 += 1
+    else:
+        print("Opção inválida")
+
+print(f"Número de votos do candidato um: {candidato1}")
+print(f"Número de votos do candidato dois: {candidato2}")
+print(f"Número de votos do candidato três: {candidato3}\n")
 
 
 ''' 4. Desenvolva um programa que funcione da seguinte maneira: Solicite ao usuário
@@ -16,14 +34,57 @@ que informe a quantidade total de pessoas em um grupo. Para cada pessoa, peça
 que o usuário registre o sexo, utilizando a letra 'm' ou 'M' para masculino. O
 programa deve contar e, ao final, exibir o total de pessoas do sexo masculino. '''
 
+qtdeM = 0
+qtdeF = 0
+
+qtdePessoas = int(input("Digite a quantidade total de pessoas no grupo: "))
+for i in range(qtdePessoas):
+    sexo = input("Digite o sexo (m) ou (f): ").lower()
+    if sexo == 'm':
+        qtdeM += 1
+    elif sexo == 'f':
+        qtdeF += 1
+    else:
+        print("Opção inválida")
+
+print(f"Total de pessoas do sexo masculino: {qtdeM}.\n")
+
+
 ''' 5. Desenvolva um programa que solicite ao usuário um nome e uma senha,
 garantindo que a senha não seja igual ao nome de usuário. Se forem iguais, exiba
 uma mensagem de erro e peça as informações novamente. '''
 
+nome = input("Digite seu nome: ")
+senha = input("Digite sua senha: ")
+
+if nome == senha:
+    senha = input("Senha inválida. Digite uma senha diferente do seu nome: ")
+
+
 ''' 6. Ler do teclado a idade e o sexo de 10 pessoas, calcule e imprima:
-
 idade média das mulheres
-
 idade média dos homens
-
 idade média do grupo '''
+
+somaF = 0
+somaM = 0
+somaTotal = 0
+qtdeF = 0
+qtdeM = 0
+
+for i in range(10):
+    sexo = input("Digite o sexo (M) ou (F): ").lower()
+    if sexo == "m" or sexo == "f":
+        idade = float(input("Digite a idade: "))
+        if sexo == "m":
+            somaM += idade
+            somaTotal += idade
+            qtdeM += 1
+        else:
+            somaF += idade
+            somaTotal += idade
+            qtdeF += 1
+
+print(f"A idade média das mulheres é: {somaF/qtdeF}.")
+print(f"A idade média dos homens é: {somaM/qtdeM}.")
+print(f"A idade média do grupo é: {somaTotal/10}.")

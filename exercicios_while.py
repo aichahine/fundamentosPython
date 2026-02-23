@@ -4,22 +4,20 @@ import time
 
 ''' Exercícios while '''
 
+
 ''' 5. O programa deve pedir letras ao usuário até que 
 ele digite "0". Ao final, mostre quantas vogais 
 (a, e, i, o, u) foram digitadas. '''
 
-
-vogais = ["a", "e", "i", "o", "u"]
 contagem = 0
+letra = ''
 
-letra = print(input("Digite uma letra ou 0 para sair: "))
-while letra != "0":
-    letra = print(input("Digite mais letra ou 0 para sair: "))
-    if letra in vogais:
+while letra != '0':
+    letra = input("Digite uma letra ou 0 para sair: ").lower()
+    if letra in 'aeiou':
         contagem += 1
-    elif letra == "0":
-        print(f"Fim do programa. Foram digitadas {contagem} vogais.")
-        break
+
+print(f"Fim do programa. Foram digitadas {contagem} vogais.")
 
 
 '''4. O programa deve pedir a senha correta (definida no 
