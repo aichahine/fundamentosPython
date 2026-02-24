@@ -57,7 +57,7 @@ uma mensagem de erro e peça as informações novamente. '''
 nome = input("Digite seu nome: ")
 senha = input("Digite sua senha: ")
 
-if nome == senha:
+while nome == senha:
     senha = input("Senha inválida. Digite uma senha diferente do seu nome: ")
 
 
