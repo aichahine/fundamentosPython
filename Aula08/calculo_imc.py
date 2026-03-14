@@ -1,11 +1,6 @@
 import os
 os.system('cls')
 
-''' Oitava aula, 14 de março de 2026 '''
-''' Projeto 01 '''
-
-''' Modularização / Decomposição '''
-
 def calculo_imc(peso, altura):
     """ Recebe o peso em kg e a altura em m e calcula o IMC """
     imc = peso / (altura * altura)

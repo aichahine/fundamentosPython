@@ -1,11 +1,6 @@
 import os
 os.system('cls')
 
-''' Oitava aula, 14 de março de 2026 '''
-''' Projeto 01 '''
-
-''' Modularização / Decomposição '''
-
 def recebe_peso_altura():
     """ Recebe o peso em kg e a altura em m do usuário """
     peso = float(input("Digite seu peso em kg: "))
