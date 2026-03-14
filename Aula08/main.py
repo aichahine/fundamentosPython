@@ -20,6 +20,8 @@ while True:
         print(f"O seu IMC é {round(imc_usuario, 4)}")
     elif opcao == 2:
         if imc_usuario in locals():
-            print(f"A classificação do usuário é {classificacao_imc(imc_usuario)}.")
+            classificacao = classificacao_imc(imc_usuario)
+            print(f"\nSeu IMC atual é {round(imc_usuario, 2)}")
+            print(f"Sua classificação é: {classificacao}")
         else:
-            print("É necessário calcular o IMC para obter a sua classificação.")
+            print("É necessário calcular o IMC antes de classificar.")
